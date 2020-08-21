@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Animation</title>
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <h1>New delivery</h1>
+
+        <section class="countdown">
+            <div class="countdown-timer">
+                <svg class="countdown-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <g class="countdown-timer__circle">
+                    <circle class="countdown-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                    <path
+                      id="countdown-timer-path-remaining"
+                      stroke-dasharray="283"
+                      stroke-line-cap="square"
+                      class="countdown-timer__path-remaining green"
+                      d="M 50, 50 m -45, 0 a 45,45 0 1,0 90,0 a 45,45 0 1,0 -90,0"
+                    ></path>
+                  </g>
+                </svg>
+                <p id="countdown-timer-label" class="countdown-timer__label"></p>                       
+            </div>
+            <span class="accept-text">To accept</span>
+            <img class="success" src="./assets/accept-icon.png" alt="check" height="34">
+        </section>
+
+        <footer>
+            <div class="ctas">
+                <div>
+                    <button data-selector="decline">
+                        <img src="./assets/discard-icon.png" alt="decline">
+                    </button>
+                    <p>Decline</p>
+                </div>
+    
+                <div>
+                    <button data-selector="accept">
+                        <img src="./assets/accept-icon.png" alt="decline">
+                    </button>
+                    <p>Accept</p>
+                </div>
+            </div>
+    
+            <p>Press and hold for a moment to accept</p>
+        </footer>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
